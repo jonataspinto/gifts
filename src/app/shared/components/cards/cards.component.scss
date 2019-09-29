@@ -1,0 +1,14 @@
+.card{
+    min-width: 180px;
+    max-width: 200px;
+    border: 1px solid black;
+    .cardBody{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 100%
+        }
+    }
+
+}

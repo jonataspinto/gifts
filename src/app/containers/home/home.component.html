@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<!-- <app-form></app-form> -->
+<section *ngFor= "let dado of dados" >
+  <div>
+    <app-cards imgSrc = {{dado.imgSrc}} name = {{dado.name}} key = {{dado.key}} (click)= "ten(dado)"></app-cards>
+  </div>
+
+  <!-- <button (click)></button> -->
+
+</section>
