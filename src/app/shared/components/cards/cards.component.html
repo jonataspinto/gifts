@@ -1,7 +1,6 @@
-<section class="card" [routerLink]="router">
-  <div class="cardBody">
-    <img [src]="imgSrc" alt="">
-    <p>{{name}}</p>
-    <p>{{key}}</p>
+<div class="card" [ngStyle]="getStyle()">
+  <img [src]="imgSrc" class="card-img-top" alt="...">
+  <div class="card-body" >
+    <ng-content></ng-content>
   </div>
-</section>
+</div>

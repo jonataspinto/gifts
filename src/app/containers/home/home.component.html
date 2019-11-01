@@ -1,10 +1,17 @@
 <app-nav></app-nav>
-<!-- <app-form></app-form> -->
-<section *ngFor= "let dado of dados" >
-  <div>
-    <app-cards imgSrc = {{dado.imgSrc}} name = {{dado.name}} key = {{dado.key}} (click)= "ten(dado)"></app-cards>
-  </div>
+<section class="container d-flex justify-content-around flex-wrap pb-4"  >
 
-  <!-- <button (click)></button> -->
+    <app-cards class="mt-5" *ngFor= "let dado of dados" imgSrc = {{dado.imgSrc}} width="18em">
+        <h5 class="card-title">{{dado.name}}</h5>
+        <app-button (click)= "ten(dado)" class="btn btn-primary">{{lang.viewList}}</app-button>
+    </app-cards>
 
+    <app-modal type="modalDefault " class="modalContainer d-flex justify-content-center align-items-center">
+        <form action="">
+            <app-input type=text id=name placeholder=Nome color=red></app-input>
+            <app-input type=password id=password placeholder=Senha></app-input>
+        </form>
+    </app-modal>
+    
 </section>
+

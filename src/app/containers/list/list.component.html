@@ -1,5 +1,19 @@
 <app-nav></app-nav>
+<div class="container d-flex justify-content-around flex-wrap pb-4" >
+  <h1>{{user.name}}</h1>
+  <button (click)= "logout()"></button>
+  <app-cards class="mt-5" *ngFor = "let item of gifted.items" imgSrc= "{{item.imgSrc}}" width="13em">
+    <h5 class="card-title">{{item.name}}</h5>
+    <app-button (click)="deleteItem(item.key)" class="btn btn-primary">Remover</app-button>
+  </app-cards>
 
-<p>
-  list works! {{contentList}}
-</p>
+</div>
+
+<app-modal type="modalDefault " class="modalContainer d-flex justify-content-center align-items-center">
+    <form action="" [formGroup]="form">
+      <P>{{lang.informForList}}</P>
+      <app-input  #name type=text id=name labelText={{lang.whatsName}} formControlName="name" ></app-input>
+      <app-input #dateBirth type=date id=datebirth labelText={{lang.whenBorn}} formControlName="dateBirth"></app-input>
+      <app-button class="btn btn-primary" (click)="[save(), toggleModal()]">{{lang.save}}</app-button>
+    </form>
+</app-modal>

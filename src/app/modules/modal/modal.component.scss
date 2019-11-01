@@ -1,0 +1,26 @@
+@import '../../../styles.scss';
+.modalContainer {
+  @include box($maxWidthPrimary, $maxHeightPrimary);
+  @extend %positionFixed;
+  background-color: $bgColorTertiary;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  top: 1000px;
+  left: 0;
+  z-index: 5;
+  transition: all ease-in-out 0.4s;
+
+  #modal {
+    @extend %textAlignCenter;
+    z-index: 6;
+  }
+  
+  .modalDefault{
+    @include text(#4B4B4B, null, null, $fontPrimary, $fontWeightSmall, 18px);
+    @include theme(#FFFFFF, initial, 5px);
+    @include box(80vw, 250px);
+    max-width: 500px;
+    padding: 36px 10px;
+    line-height: 21px;
+    color:black
+  }
+}

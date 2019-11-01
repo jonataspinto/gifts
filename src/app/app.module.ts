@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './containers/home/home.module';
 import { ListModule } from './containers/list/list.module';
+import { InputComponent } from './modules/form/input/input.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ListModule } from './containers/list/list.module';
     HomeModule,
     ListModule
   ],
-  providers: [],
+  providers: [InputComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

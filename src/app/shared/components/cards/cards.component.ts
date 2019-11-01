@@ -13,7 +13,13 @@ export class CardsComponent implements OnInit {
   @Input() imgSrc: string = ''
   @Input() key: string = ''
   @Input() router: string = ''
+  @Input() width: string
 
+getStyle(){
+  return {
+    'width': this.width
+  }
+}
   ngOnInit() {
   }
 

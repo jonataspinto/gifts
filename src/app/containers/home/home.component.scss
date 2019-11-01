@@ -1,0 +1,10 @@
+@import'../../../styles.scss';
+app-nav{
+    display: none;
+}
+
+.container{
+    // background-color: red;
+    min-height: 100vh;
+    // @include flex(center, none, row);
+}

@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormComponent } from './form.component';
 import { InputComponent } from './input/input.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [FormComponent, InputComponent],
+  declarations: [
+    InputComponent,
+    ButtonComponent
+  ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports:[FormComponent]
+  exports:[
+    InputComponent,
+    ButtonComponent
+  ]
 })
 export class FormModule { }

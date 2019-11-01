@@ -11,20 +11,14 @@ export class ItemService {
   constructor( private db: AngularFireDatabase) { }
 
 
-  insert(item: Item) {
-    this.db.list('jonatas.items').push(item)
+  insertItem(item: Item, giftedKey) {
+    this.db.database.ref('gifted').child(giftedKey).child('items').push(item)
   }
 
-  getAll(){
-    return this.db.list('gifted')
-    .snapshotChanges()
-    .pipe(
-        map(changes => {
-            return changes.map(c => ({ key: c.payload.key, ...c.payload.val()}));
-        })
-    );
-}
-
+  deleteItem(giftedKey, itemKey){
+    // console.log(giftedKey + " gifted")
+    // console.log(itemKey + " item")
+    this.db.list('gifted/'+giftedKey+'/items').remove(itemKey)
+  }
 
 }
-

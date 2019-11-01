@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin box($-width, $-heigth){
+  width: $-width;
+  min-height: $-heigth;
+}
+@mixin theme($-backgroundColor, $-border, $-borderRadius){
+  background-color: $-backgroundColor;
+  border: $-border;
+  border-radius: $-borderRadius;
+}
+@mixin text($-color, $-textDecoration, $-textTransform, $-fontFamily, $-fontWeight, $-fontSize){    
+  color: $-color;
+  text-decoration: $-textDecoration;
+  text-transform: $-textTransform;
+  font-family: $-fontFamily;
+  font-weight: $-fontWeight;
+  font-size: $-fontSize;
+}
